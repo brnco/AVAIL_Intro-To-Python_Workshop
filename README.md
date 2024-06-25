@@ -8,11 +8,11 @@ The presentation slides can be accessed at this link: 🚧coming soon🚧
 
 # Tabel Of Contents
 
-[Course Description]
+[Course Description](https://github.com/brnco/AVAIL_Intro-To-Python_Workshop/blob/main/README.md#course-description)
 
-[Agenda]
+[Agenda](https://github.com/brnco/AVAIL_Intro-To-Python_Workshop/blob/main/README.md#agenda)
 
-[Install Instructions]
+[Install Instructions](https://github.com/brnco/AVAIL_Intro-To-Python_Workshop/blob/main/README.md#install-instructions)
 
 # Course Description
 
