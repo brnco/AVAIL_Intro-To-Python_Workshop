@@ -1,0 +1,37 @@
+Outline
+
+1. Intro - Setup - Python Basics
+
+Intro to me and Python - 5m
+
+Rough History of Python + context now - 5m
+
+Python Versioning, Text Editors - 5m
+
+Invoking Python, Interactive vs Scripts - 5m 
+
+Modules and Packages - 10m
+
+Functions, variables, errors, getting help - 15mins
+
+Questions - 15m
+
+2. Objects and Data Structures
+
+Data Structures and Types - 10m
+
+Everything is an Object - 10m
+
+Pathlib module deep dive - 10m
+
+Break and Questions - 30m
+
+3. Loops, Conditionals, Scripting
+
+For Loops - 10m
+
+Conditionals - 5m
+
+Scripting our example project - 15m
+
+Questions - 30m
