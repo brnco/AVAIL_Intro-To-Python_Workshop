@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>😎 AVAIL Workshop: Intro to CLI</title>
+        <title>😎 AVAIL Workshop: Intro to Python</title>
         <link rel="stylesheet" href="reveal.js/dist/reset.css">
         <link rel="stylesheet" href="reveal.js/dist/reveal.css">
         <link rel="stylesheet" href="reveal.js/dist/theme/materialocean.css" id="theme">
@@ -85,8 +85,8 @@
         <div class="reveal">
             <div class="slides">
                 <section style="text-align:center;'">
-                    <h1>Intro to the Command Line Interface</h1><br>
-                    <h3>AVAIL | 2024-07-16</h3><br>
+                    <h1>Intro to Python</h1><br>
+                    <h3>AVAIL | 2024-07-17</h3><br>
                     <h5>with Brendan Coates (he|his)</h5><br>
                 </section>
                 <section style="text-align:center;">
@@ -101,77 +101,118 @@
                     </section>
                     <section>
                         <h3>Part 1</h3>
-                        <h3>Overview + Intro To Commands</h3><br>
+                        <h3>Intro, Setup, Basics</h3><br>
                         10am - 11am EDT<br><br>
-                        history and context of CLI<br>
-                        basic command line use
+                        brief history and context of Python<br>
+                        setup, interactive mode<br>
+                        modules and packages<br>
+                        functions, variables, errors, help
                     </section>
                     <section>
                         <h3>Part 2</h3>
-                        <h3>CLI Tools for DigiPres</h3><br>
+                        <h3>Objects and Data Structures</h3><br>
                         11am-11:50pm EDT<br><br>
-                        moving files<br>
-                        checksums<br>
-                        10 minute break
+                        data structures and types<br>
+                        pathlib module deep-dive<br>
+                        break
                     </section>
                     <section>
                         <h3>Part 3</h3>
-                        <h3>More Tools + Scripting</h3><br>
+                        <h3>Loops, Conditionals, Scripting</h3><br>
                         12pm - 1pm EDT<br><br>
-                        mediainfo, bwfmetaedit<br>
-                        workflows and loops
+                        for loops<br>
+                        if statements<br>
+                        scripting
                     </section>
                 </section>
                 <section>
-                    <h2>What is the command line?</h2>
+                    <h2>What is Python?</h2>
                         <section>
-                            <h3>Historical use</h3>
+                            <h3>Brief History</h3>
                             <div class="twoColContainer">
                                 <div class="colL">
-                                    A "terminal" connects to a computer<br>
-                                    Only interface before 1973<br>
-                                    Bell Labs, UNIX, Bourne Shell<br>
-                                    GNU:Bourne Again Shell (bash)<br>
+                                    initial development began 1989<br>
+                                    first released in 1991<br>
+                                    Python 2 retired in 2020
                                 </div>
                                 <div class="colR">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/DEC_VT100_terminal_transparent.png/1280px-DEC_VT100_terminal_transparent.png">
+                                    <img src="">
                                 </div>
                             </div>
                         </section>
                         <section>
-                            <h3>Modern use</h3>
+                            <h3>Python Today</h3>
                             <div class="twoColContainer">
                                 <div class="colL">
-                                    "terminal emulator," technically<br>
-                                    many terminals to choose from<br>
-                                    common interface for servers<br>
-                                    ppl will think you're a hacker 😎
+                                    hugely popular language<br>
+                                    especially for data science, ML/AI<br>
+                                    does everything pretty well, if slowly
                                 </div>
                                 <div class="colR">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Xterm.png/300px-Xterm.png">
-                                    <br>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/XtermMenus.png/220px-XtermMenus.png"
+                                    <img src="">
                                 </div>
                             </div>
                         </section>
                         <section>
-                            <h3>What good is it?</h3>
-                            more consistency, less "meatdata"<br>
-                            computers don't get bored<br>
-                            connects you to your computing ancestors<br>
-                            instantiate your workflows in code!
+                            <h3>Versioning</h3>
+                            many versions can coexist on 1 machine<br>
+                            relies on virtual environments<br>
+                            kinda hell to manage tbh
+                        </section>
                         </section>
                         <section>
-                            <h3>Basic Command Structure</h3>
-                            <code>software -options arguments</code><br>
-                            <iframe
-                            src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
-                            width="100%"
-                            height="100%"
-                            allowfullscreen="true"
-                            autoplay="false">
-                            </iframe>
-                       </section>
+                            <h2>Using Python</h2>
+                            <section>
+                                <h3>Invoking Python</h3>
+                                <div class="twoColContainer">
+                                    <div class="colL">
+                                        <h5>Interpreter</h5>
+                                        a bash-like terminal<br>
+                                        can't save
+                                    </div>
+                                    <div class="colR">
+                                        <h5>Script</h5>
+                                        <code>python script.py</code><br>
+                                        runs pre-written code
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h3>Text Editor</h3>
+                                not like Word<br>
+                                Microsoft VS Code hugely popular<br>
+                                Notepad++ less intimidating imo<br>
+                                Pycharm, neovim, etc...
+                            </section>
+                        </section>
+                        <section>
+                            <h2>Modules/ Packages</h2>
+                            <section>
+                                <h3>Python Ecosystem</h3>
+                                Python Standard Library<br>
+                                innumerable modules<br>
+                                package manager - pip<br>
+                                you can write your own!
+                            </section>
+                            <section>
+                                <h3>Using Modules</h3>
+                                <div class="twoColContainer">
+                                <div class="r-stack colLCLI">
+                                <code>import pathlib</code>
+                                <code>from module import subpkg</code>
+                                <code>import pkg as fubar</code>
+                                </div>
+                                <div class="colRCLI">
+                                <iframe
+                                src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
+                                width="100%"
+                                height="100%"
+                                allowfullscreen="true"
+                                autoplay="false">
+                                </iframe>
+                                </div>
+                                </div>
+                            </section>
                        <section>
                             <h2>Stopping A Command</h2>
                             <div class="twoColContainer">
