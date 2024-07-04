@@ -35,3 +35,15 @@ Conditionals - 5m
 Scripting our example project - 15m
 
 Questions - 30m
+
+
+One Example
+
+you get a hard drive back from a vendor and you need to do stuff to what's on the drive
+
+tasks include:
+list the file name of a file
+list the file extension of a file
+list the sample rate/ bit depth of a file
+verify the hash of a file against a manifest
+verify that a file in the manifest is on the drive
