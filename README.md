@@ -32,15 +32,15 @@ Python as a programming language; Python versions and setup; using Python intera
 
 ## Hour 2 
 
-### Part 2 - Loops and Data Structures
+### Part 2 - Objects and Data Structures
 
-lists and dictionaries; loops; pathlib module
+Everything Is An Object; lists and dictionaries; pathlib module
 
 ## Hour 3
 
-### Part 3 - Objects, Attributes, Methods, Scripting
+### Part 3 - Loops, Conditionals, Scripting
 
-intro to objects, more pathlib; use of subprocess module for running command line applications; basic scripting
+for loops; conditional statements; more pathlib + subprocess module; basic scripting
 
 # Install instructions
 
