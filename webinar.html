@@ -302,10 +302,11 @@
                             </div>
                             <div class="fragment fade-in-then-out">
                                 <h3>list</h3>
-                                <code>len([1, 2, "3"])</code><br>
-                                <code>[1, 2].append(3)</code><br>
-                                <code>[1, 2].extend([3, 4])</code><br>
-                                <code>[1, 2].append([3, 4])</code>
+                                <code>len()</code><br>
+                                <code>sort()</code><br>
+                                <code>set()</code><br>
+                                <code>.append()</code><br>
+                                <code>.extend()</code>
                             </div>
     			            <div class="fragment fade-in-then-out">
                                 <h3>dictionary</h3>
@@ -316,9 +317,8 @@
                             </div>
     			            <div class="fragment fade-in-then-out">
                                 <h3>dictionary</h3>
-                                <code>dictionary.update(</code><br>
-                                <code>{"Middle Name": "Emerson"})</code><br><br>
-                                <code>dictionary.keys()</code>
+                                <code>.update()</code><br>
+                                <code>.keys()</code>
                             </div>
 			            </div>
   		                <div class="colRCLI">
@@ -333,18 +333,26 @@
                         </div>
                 </section> <!-- end of Objects and Data Structures -->
                 <section>
-                    <h2>Permissions</h2><br>
+                    <h2>Pathlib</h2><br>
                     <div class="twoColContainer">
                       <div class="r-stack colLCLI">
-                      <div id="sudo" class="fragment fade-in-then-out">
-                          <h3>sudo</h3>
-                          "super user do"<br>
-                          you're admin now<br>
+                      <div class="fragment fade-in-then-out">
+                          <h3>Pythonic Path Handling</h3>
+                          abstracts the filesystem<br>
+                          allows for easy path manipulation
                       </div>
-                      <div id="chmod" class="fragment fade-in-then-out">
-                          <h3>chmod|chown</h3>
-                          chmod = change perms<br>
-                          chown = change ownership<br>
+                      <div class="fragment fade-in-then-out">
+                          <h3>Pathlib Basics</h3>
+                          pathlib.Path()<br>
+                          filepath.parent<br>
+                          filepath.name<br>
+                          filepath.suffix
+                      </div>
+                      <div class="fragment fade-in-then-out">
+                          <h3>Pathlib Advanced</h3>
+                          filepath.exists()<br>
+                          filepath.is_dir()<br>
+                          dirpath.glob()
                       </div>
                   </div>
                   <div class="colRCLI">
@@ -359,40 +367,32 @@
                 </div>
             </section>
             <section>
-                <h2>I/O, Redirection</h2><br>
+                <h2>Questions + Break<h2>
+            </section>
+            <section>
+                <h2>Loops, Ifs, Scripts</h2><br>
                 <div class="twoColContainer">
                      <div class="r-stack colLCLI">
-                       <div id="echo" class="fragment fade-in-then-out">
-                         <h3>echo</h3>
-                         print to terminal<br>
-                         text -> stdout
+                       <div class="fragment fade-in-then-out">
+                         <h3>For Loops</h3>
+                         loops over everything in an <i>iterable</i><br>
                        </div>
                       <div class="fragment fade-in-then-out">
-                        <h3>stdin</h3>
-                        "standard in"
-                        <h3>stdout</h3>
-                        "standard out"
-                        <h3>stderr</h3>
-                        "standard error"
+                        <h3>For Loops</h3>
+                        for item in list:<br><br>
+                        for key, value in dict.items():
                       </div>
-                      <div id="pipes" class="fragment fade-in-then-out">
-                        <h3>pipe</h3>
-                        send output to command<br>
-                        common uses:<br>
-                        tail<br>
-                        less<br>
-                        grep
+                      <div class="fragment fade-in-then-out">
+                        <h3>Conditionals</h3>
+                        if: then<br><br>
+                        separates actions based on your rules<br>
+                        rules must be true|false
                       </div>
-                      <div id="redirects" class="fragment fade-in-then-out">
-                        <h3>redirect</h3>
-                        send output to file<br>
-                        cmd > /dev/null<br>
-                        cmd >> log.txt
-                      </div>
-                      <div id="ampersand" class="fragment fade-in-then-out">
-                          <h3>&&</h3>
-                          sequence commands<br>
-                          runs cmd2 IF cmd1 ok
+                      <div class="fragment fade-in-then-out">
+                        <h3>Conditionals</h3>
+                        if filepath.exists():<br>
+                        if not filepath.is_dir():<br>
+                        if item not in list:
                       </div>
                      </div>
               <div class="colRCLI">
@@ -405,185 +405,7 @@
                 </iframe>
                 </div>
               </div>
-            </section>
-            <section>
-              <h1>CLI for DigiPres</h1>
-              moving files<br>
-              doing hashes
-            </section>
-            <section>
-                <h2>Moving Files</h2><br>
-                <div class="twoColContainer">
-                     <div class="r-stack colLCLI">
-                       <div id="cp" class="fragment fade-in-then-out">
-                         <h3>cp</h3>
-                         "copy"<br>
-                         flags:<br>
-                         -R = recursive (subdirs)<br>
-                         -a = timestamps<br>
-                         -v = verbose
-                       </div>
-                      <div id="mv" class="fragment fade-in-then-out">
-                        <h3>mv</h3>
-                        "move"<br>
-                        renames files/paths<br>
-                        flags:<br>
-                      </div>
-                      <div id="mkdir" class="fragment fade-in-then-out">
-                        <h3>mkdir</h3>
-                        "make directory"<br>
-                        flags:<br>
-                        -p = parents<br>
-                        -v = verbose
-                      </div>
-                      <div id="rsync1" class="fragment fade-in-then-out">
-                        <h3>rsync</h3>
-                        sync files/ dirs<br>
-                        flags:<br>
-                        -a = archive mode<br>
-                        -v = verbose<br>
-                        -z = compress<br>
-                        -x = extended attrs
-                      </div>
-                      <div id="rsync2" class="fragment fade-in-then-out">
-                        <h3>rsync</h3>
-                        flags:<br>
-                        --progress<br>
-                        --logfile=path<br>
-                        --exclude
-                      </div>
-                     </div>
-              <div class="colRCLI">
-                <iframe
-                 src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
-                 width="100%"
-                 height="100%"
-                 allowfullscreen="true"
-                 autoplay="false">
-                </iframe>
-                </div>
-              </div>
-            </section>
-            <section>
-                <h2>Checksums</h2><br>
-                <div class="twoColContainer">
-                  <div class="colLEven">
-                    <h3>Hashes</h3>
-                    break file into blocks<br>
-                    read blocks<br>
-                    compute hash of file<br>
-                    check full file hash
-                  </div>
-                  <div class="colREven">
-                    <h3>CRC</h3>
-                    break file into blocks<br>
-                    read blocks<br>
-                    compute hash of block<br>
-                    check block hashes/ order
-                  </div>
-                </div>
-            </section>
-            <section>
-                <h2>Checksums</h2><br>
-                <div class="twoColContainer">
-                 <div class="r-stack colLCLI">
-                   <div id="md5sum" class="fragment fade-in-then-out">
-                     <h3>md5sum</h3>
-                     generate MD5 hash<br>
-                     flags:<br>
-                     -c = check files
-                   </div>
-                  <div id="shasum" class="fragment fade-in-then-out">
-                    <h3>shasum</h3>
-                    generate SHA hash<br>
-                    flags:<br>
-                    -a = algorithm<br>
-                    -p = portable<br>
-                    -c = check files
-                  </div>
-                 </div>
-                 <div class="colRCLI">
-                  <iframe
-                   src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
-                   width="100%"
-                   height="100%"
-                   allowfullscreen="true"
-                   autoplay="false">
-                  </iframe>
-            </div>
-          </div>
-          </section>
-          <section>
-              <h2>Tools For DigiPres</h2>
-              <div class="twoColContainer">
-                  <div class="r-stack colLCLI">
-                      <div class="fragment fade-in-then-out">
-                          <h3>MediaInfo</h3>
-                          open-source tool for viewing AV file metadata<br><br>
-                          available via MediaArea project
-                      </div>
-                      <div class="fragment fade-in-then-out">
-                          <h3>MediaInfo</h3>
-                          flags:<br>
-                          <code>--Output=JSON</code><br>
-                          <code>--Output=PBCore</code><br>
-                          <code>--Logfile=</code>
-                    </div>
-                    <div class="fragment fade-in-then-out">
-                        <h3>BWF MetaEdit</h3>
-                        open-source rool for viewing and editing WAVE file metadata<br><br>
-                        available via MediaArea project
-                    </div>
-                    <div class="fragment fade-in-then-out">
-                        <h3>A Note About WAVEs</h3>
-                        one of the simplest file formats<br>
-                        look you can read it
-                    </div>
-                    <div class="fragment fade-in-then-out">
-                        <h3>BWF MetaEdit</h3>
-                        each BWF field has its own flag<br>
-                        <code>--Originator</code><br>
-                        <code>--originatorReference</code><br>
-                        <code>--ICRD</code>
-                    </div>
-                  </div>
-                 <div class="colRCLI">
-                  <iframe
-                   src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
-                   width="100%"
-                   height="100%"
-                   allowfullscreen="true"
-                   autoplay="false">
-                  </iframe>
-                 </div>
-              </div>
-          </section>
-            <section>
-            <h2>Scripting</h2>
-            <div class="twoColContainer">
-             <div class="r-stack colLCLI">
-               <div id="find3" class="fragment fade-in-then-out">
-                 <h3>find</h3>
-                 execute a command<br>
-                 on output of find
-               </div>
-               <div id="for" class="fragment fade-in-then-out">
-                 <h3>FOR loops</h3>
-                 iterate through something<br>
-                 loop thru directory
-               </div>
-              </div>
-             <div class="colRCLI">
-              <iframe
-               src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
-               width="100%"
-               height="100%"
-               allowfullscreen="true"
-               autoplay="false">
-              </iframe>
-            </div>
-          </div>
-          </section>
+            </section> <!-- end of Loops, Conditionals, Scripts -->
           <section>
             <h1>wrap up & questions</h1>
           </section>
