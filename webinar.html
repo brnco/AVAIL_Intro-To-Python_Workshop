@@ -1,0 +1,430 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>😎 AVAIL Workshop: Intro to Python</title>
+        <link rel="stylesheet" href="reveal.js/dist/reset.css">
+        <link rel="stylesheet" href="reveal.js/dist/reveal.css">
+        <link rel="stylesheet" href="reveal.js/dist/theme/materialocean.css" id="theme">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+        <style type="text/css">
+            div p {
+                text-align:left;
+            }
+            .twoColContainer{
+                display:flex;
+                /*outline:3px dotted blue;*/
+            }
+	        .colRCLI{
+		        flex:3;
+                position:relative;
+                /*outline:1px solid red;*/
+	        }
+	        .colLCLI{
+		        flex:2;
+		        text-align:left;
+                align-self:flex-start;
+                align-items:flex-start;
+		        font-size:80%;
+		        top:0;
+		        position:relative;
+                overflow:visible;
+                /*outline: 1px solid grey;*/
+	        }
+            .example_command {
+                text-align:left;
+                font-size:80%;
+                background-color:#E5E9F0;
+                color:#00010A;
+                font-family:monospace;
+                display:inline-block;
+                float:left;
+                padding:6px;
+                /*width:75%;*/
+                /*border:1px solid yellow;*/
+            }
+	        .colLCLI h3{
+		        text-align: left;
+		        text-transform: lowercase;
+	        }
+            .colL{
+                flex:2;
+                position:relative;
+                text-align:left;
+                /*outline: 1px solid grey;*/
+            }
+            .colR{
+                flex:1;
+                position:relative;
+                /*outline: 1px solid red;*/
+            }
+            .colR img{
+                object-fit:contain;
+            }
+            .colLEven{
+                flex:1;
+                position:relative;
+                text-align:left;
+                /*outline: 1px solid grey;*/
+            }
+            .colREven{
+                flex:1;
+                position:relative;
+                text-align:left;
+                /*outline: 1px solid red;*/
+            }
+            .colREven img{
+                object-fit:contain;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section style="text-align:center;'">
+                    <h1>Intro to Python</h1><br>
+                    <h3>AVAIL | 2024-07-17</h3><br>
+                    <h5>with Brendan Coates (he|his)</h5><br>
+                </section>
+                <section style="text-align:center;">
+                    <h1>About Me</h1><br>
+                    gardener, technobabbler, LATU member<br><br>
+                    archivist specializing in workflow automation,<br>
+                    AV and Oral Histories
+                </section>
+                <section>
+                    <h1>Agenda</h1><br><br>
+                    <section>
+                    </section>
+                    <section>
+                        <h3>Part 1</h3>
+                        <h3>Intro, Setup, Basics</h3><br>
+                        10am - 11am EDT<br><br>
+                        history, setup, modes, versions<br>
+                        modules and packages<br>
+                        functions, variables, errors, help
+                    </section>
+                    <section>
+                        <h3>Part 2</h3>
+                        <h3>Objects and Data Structures</h3><br>
+                        11am-11:50pm EDT<br><br>
+                        data structures and types<br>
+                        pathlib module deep-dive<br>
+                        break
+                    </section>
+                    <section>
+                        <h3>Part 3</h3>
+                        <h3>Loops, Conditionals, Scripting</h3><br>
+                        12pm - 1pm EDT<br><br>
+                        for loops<br>
+                        if statements<br>
+                        scripting
+                    </section>
+                </section>
+                <section>
+                    <h2>What is Python?</h2>
+                        <section>
+                            <h3>Brief History</h3>
+                            <div class="twoColContainer">
+                                <div class="colL">
+                                    initial development began 1989<br>
+                                    first released in 1991<br>
+                                    Python 2 retired in 2020
+                                </div>
+                                <div class="colR">
+                                    <img src="">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Python Today</h3>
+                            <div class="twoColContainer">
+                                <div class="colL">
+                                    hugely popular language<br>
+                                    especially for data science, ML/AI<br>
+                                    does everything pretty well, if slowly
+                                </div>
+                                <div class="colR">
+                                    <img src="">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <h3>Versioning</h3>
+                            many versions can coexist on 1 machine<br>
+                            relies on virtual environments<br>
+                            kinda hell to manage tbh
+                        </section>
+                        </section>
+                        <section>
+                            <h2>Using Python</h2>
+                            <section>
+                                <h3>Invoking Python</h3>
+                                <div class="twoColContainer">
+                                    <div class="colL">
+                                        <h5>Interpreter</h5>
+                                        a bash-like terminal<br>
+                                        can't save
+                                    </div>
+                                    <div class="colR">
+                                        <h5>Script</h5>
+                                        <code>python foo.py</code><br>
+                                        runs pre-written code
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h3>Text Editor</h3>
+                                not like Word<br>
+                                Microsoft VS Code hugely popular<br>
+                                Notepad++ less intimidating imo<br>
+                                Pycharm, neovim, etc...
+                            </section>
+                        </section>
+                        <section>
+                            <h2>Modules/ Packages</h2>
+                            <section>
+                                <h3>Python Ecosystem</h3>
+                                Python Standard Library<br>
+                                innumerable modules<br>
+                                package manager - pip<br>
+                                you can write your own!
+                            </section>
+                            <section>
+                                <h3>Using Modules</h3>
+                                <div class="twoColContainer">
+                                <div class="r-stack colLCLI">
+                                    <code>import pathlib</code><br>
+                                </div>
+                                <div class="colRCLI">
+                                <iframe
+                                src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
+                                width="100%"
+                                height="100%"
+                                allowfullscreen="true"
+                                autoplay="false">
+                                </iframe>
+                                </div>
+                                </div>
+                            </section>
+                        </section>
+                       <section>
+                            <h2>Python Basics</h2>
+                            <div class="twoColContainer">
+                                <div class="r-stack colLCLI">
+    			                    <div class="fragment fade-in-then-out">
+                                        <h3>Variables</h3>
+                                        human-readable pointers to values in RAM<br><br>
+                                        <code>fname = "a123.wav"</code><br>
+                                        <code>print(filename)</code>
+                                    </div>
+    			                    <div class="fragment fade-in-then-out">
+                                        <h3>Functions p1</h3>
+                                        functions separate different 
+                                        tasks in a script<br><br>
+                                        <code>def foo():</code>
+                                    </div>
+                                    <div class="fragment fade-in-then-out">
+                                        <h3>Functions pt2</h3>
+                                        functions accept arguments<br>
+                                        and return results<br><br>
+                                        <code>def foo(arg1, arg2):</code><br>
+                                        <code>    return arg1 + arg2</code>
+                                    </div>
+                                    <div class="fragment fade-in-then-out">
+                                        <h3>Errors pt1</h3>
+                                        mostly, when writing code, we get errors<br><br>
+                                        there's lots of different kinds
+                                    </div>
+                                    <div class="fragment fade-in-then-out">
+                                        <h3>Errors pt2</h3>
+                                        some error types:<br>
+                                        <code>TypeError</code><br>
+                                        <code>ValueError</code><br>
+                                        <code>RuntimeError</code><br>
+                                    </div>
+                                    <div class="fragment fade-in-then-out">
+                                        <h3>Errors pt3</h3>
+                                        the type of error can help debug the problem:<br><br>
+                                        <code>FileNotFoundError</code><br>
+                                        <code>ImportError</code><br>
+                                        <code>UnboundLocalError</code>
+                                    </div>
+                                </div>
+                                <div class="colRCLI">
+                                <iframe
+                                src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
+                                width="100%"
+                                height="100%"
+                                allowfullscreen="true"
+                                autoplay="false">
+                                </iframe>
+                                </div>
+                           </div>
+                       </section> <!-- end of Python Basics Section -->
+                </section>
+                <section>
+                    <h2>Objects & Data Structures</h2><br>
+                    <div class="twoColContainer">
+			            <div class="r-stack colLCLI">
+    			            <div class="fragment fade-in-then-out">
+        				        <h3>Objects</h3>
+                                "object oriented programming language"<br><br>
+        				        Everything is an Object
+    			            </div>
+    			            <div class="fragment fade-in-then-out">
+        				        <h3>string</h3>
+                                unicode text<br>
+        				        enclosed in "quotes" or 'apostrophes'
+    			            </div>
+                            <div class="fragment fade-in-then-out">
+                                <h3>number</h3>
+                                I never said there would be no math<br><br>
+                                two basic number types:<br>
+                                integer: <code>42</code><br>
+                                float: <code>42.0</code>
+                            </div>
+    			            <div class="fragment fade-in-then-out">
+        				        <h3>conversions</h3>
+                                you can convert between strings and numbers!<br><br>
+                                <code>foo = "5"</code><br>
+                                <code>bar = int(foo)</code><br>
+                                <code>type(bar)</code><br>
+                                <code>str(42.0)</code>
+    			            </div>
+                            <div class="fragment fade-in-then-out">
+                                <h3>list</h3>
+                                ordered sequence of objects separated by commas<br><br>
+                                <code>['pres.wav', 'acc.mp3']</code>
+                            </div>
+                            <div class="fragment fade-in-then-out">
+                                <h3>list</h3>
+                                <code>len()</code><br>
+                                <code>sort()</code><br>
+                                <code>set()</code><br>
+                                <code>.append()</code><br>
+                                <code>.extend()</code>
+                            </div>
+    			            <div class="fragment fade-in-then-out">
+                                <h3>dictionary</h3>
+                                ordered sequence of <br>
+                                key: value pairs<br><br>
+                                <code>{"First Name": "Brendan",</code><br>
+                                <code>"Last Name": "Coates"}</code>
+                            </div>
+    			            <div class="fragment fade-in-then-out">
+                                <h3>dictionary</h3>
+                                <code>.update()</code><br>
+                                <code>.keys()</code>
+                            </div>
+			            </div>
+  		                <div class="colRCLI">
+        			        <iframe
+                            src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
+                            width="100%"
+                            height="100%"
+                            allowfullscreen="true"
+                            autoplay="false">
+        				    </iframe>
+  			            </div>
+                        </div>
+                </section> <!-- end of Objects and Data Structures -->
+                <section>
+                    <h2>Pathlib</h2><br>
+                    <div class="twoColContainer">
+                      <div class="r-stack colLCLI">
+                      <div class="fragment fade-in-then-out">
+                          <h3>Pythonic Path Handling</h3>
+                          abstracts the filesystem<br>
+                          allows for easy path manipulation
+                      </div>
+                      <div class="fragment fade-in-then-out">
+                          <h3>Pathlib Basics</h3>
+                          pathlib.Path()<br>
+                          filepath.parent<br>
+                          filepath.name<br>
+                          filepath.suffix
+                      </div>
+                      <div class="fragment fade-in-then-out">
+                          <h3>Pathlib Advanced</h3>
+                          filepath.exists()<br>
+                          filepath.is_dir()<br>
+                          dirpath.glob()
+                      </div>
+                  </div>
+                  <div class="colRCLI">
+                    <iframe
+                       src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
+                       width="100%"
+                       height="100%"
+                       allowfullscreen="true"
+                       autoplay="false">
+                    </iframe>
+                  </div>
+                </div>
+            </section>
+            <section>
+                <h2>Questions + Break<h2>
+            </section>
+            <section>
+                <h2>Loops, Ifs, Scripts</h2><br>
+                <div class="twoColContainer">
+                     <div class="r-stack colLCLI">
+                       <div class="fragment fade-in-then-out">
+                         <h3>For Loops</h3>
+                         loops over everything in an <i>iterable</i><br>
+                       </div>
+                      <div class="fragment fade-in-then-out">
+                        <h3>For Loops</h3>
+                        for item in list:<br><br>
+                        for key, value in dict.items():
+                      </div>
+                      <div class="fragment fade-in-then-out">
+                        <h3>Conditionals</h3>
+                        if: then<br><br>
+                        separates actions based on your rules<br>
+                        rules must be true|false
+                      </div>
+                      <div class="fragment fade-in-then-out">
+                        <h3>Conditionals</h3>
+                        if filepath.exists():<br>
+                        if not filepath.is_dir():<br>
+                        if item not in list:
+                      </div>
+                     </div>
+              <div class="colRCLI">
+                <iframe
+                 src="https://player.twitch.tv/?channel=brnc0&parent=brnco.github.io"
+                 width="100%"
+                 height="100%"
+                 allowfullscreen="true"
+                 autoplay="false">
+                </iframe>
+                </div>
+              </div>
+            </section> <!-- end of Loops, Conditionals, Scripts -->
+          <section>
+            <h1>wrap up & questions</h1>
+          </section>
+          <section>
+            <h1>thank you!</h1>
+            and thanks to everyone who made this possible
+          </section>
+            </section>
+          </div><!-- end of <div class=slides> -->
+          </div><!-- end of <div class="reveal.js"> -->
+        <script src="reveal.js/dist/reveal.js"></script>
+        <script src="reveal.js/plugin/notes/notes.js"></script>
+        <script src="reveal.js/plugin/markdown/markdown.js"></script>
+        <script src="reveal.js/plugin/highlight/highlight.js"></script>
+        <script>
+            Reveal.initialize({
+                hash: true,
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            });
+        </script>
+    </body>
+</html>
