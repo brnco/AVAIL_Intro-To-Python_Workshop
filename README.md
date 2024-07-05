@@ -4,9 +4,7 @@
 
 This single-day free webinar provides an introduction to the Python programming language. It's hosted by the Smithsonian Library and Archives (SLA) Audiovisual Preservation Initiative (AVMPI) and Audiovisual Archivists Interest Lunch (AVAIL).
 
-fubar
-
-The presentation slides can be accessed at this link: 🚧coming soon🚧
+The presentation slides can be accessed at [this link](https://brnco.github.io/AVAIL_Intro-To-Python_Workshop/webinar.html)
 
 # Tabel Of Contents
 
