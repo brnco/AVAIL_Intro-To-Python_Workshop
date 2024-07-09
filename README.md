@@ -6,6 +6,8 @@ This single-day free webinar provides an introduction to the Python programming 
 
 The presentation slides can be accessed at [this link](https://brnco.github.io/AVAIL_Intro-To-Python_Workshop/webinar.html)
 
+The test fiiles can be accessed at [this link](https://drive.google.com/drive/folders/11W0r8YrGhkE_wecHo-pMPR-nBiLBEkLS?usp=drive_link)
+
 # Tabel Of Contents
 
 [Course Description](https://github.com/brnco/AVAIL_Intro-To-Python_Workshop/blob/main/README.md#course-description)
