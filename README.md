@@ -54,7 +54,7 @@ We're going to keep it extremely simple for this workshop, though. Any Python ve
 
 1. Open a Terminal or WSL
 
-2. type `python` and hit enter
+2. type `python` and hit enter - try `python3` and hit Enter while you're at it
 
 ### What was the result
 
