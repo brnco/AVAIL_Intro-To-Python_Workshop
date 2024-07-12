@@ -1,5 +1,12 @@
 Outline
 
+0. Tabs to have open before you start
+https://pypi.org
+https://docs.python.org/3/library/pathlib.html
+https://pyairtable.readthedocs.io/en/stable/index.html
+https://github.com/gtalarico/pyairtable
+
+
 1. Intro - Setup - Python Basics
 
 Intro to me and Python - 5m
@@ -7,12 +14,39 @@ Intro to me and Python - 5m
 Rough History of Python + context now - 5m
 
 Python Versioning, Text Editors - 5m
+used to be easy to set up, there was 1 version
+now the setup can be really frustrating
 
-Invoking Python, Interactive vs Scripts - 5m 
+Invoking Python, Interactive vs Scripts - 5m
+interactive shell is like CLI but with Python syntax
+Hello, World!
 
-Modules and Packages - 10m
+Modules / Packages - 10m
+Python is extensible and the packaging ecosystem is one of the reasons it's so popular
+PSL is everything that you don't have to install or import
+to install packages you need pip
+those pkgs may themselves have dependencies (of other pkgs)
+you can remove pkgs with pip
+DEMO PyPI
+DEMO GitHub
 
 Functions, variables, errors, getting help - 15mins
+variables are the backbone of any programming language, the real power of computing
+it's an abstraction of a value, a human-readable pointer to a location in memory
+variables can be overwritten
+they can change types
+
+Functions are the basic structure of code
+they separate individual tasks - e.g. on a login page, there's a function to laod the page, another to check your password, and another to direct you to the homepage after login, and another to prompt you to to reset your password - all different functions, potentially
+they accept arguments, order is important or they can be named
+they return results
+DEMO - def hello_world() return hello_word
+
+Errors detail what went wrong with the execution of code
+so the way this works is: you write code in your text editor, you move to terminal and run code, you get an error (usually)
+you'll get 90% errors, it's  a discipline of failure mostly
+you can write your own error types but Python provides a bunch that are really helpful
+DEMO - generate each of the errors
 
 Questions - 15m
 
